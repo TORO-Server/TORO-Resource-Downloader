@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "toro_resource_downloader",
+  "version": "${version}",
+  "name": "TORO_Resource_Downloader",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/USER/TORO_Resource_Downloader"
+  },
+  "license": "MIT",
+  "icon": "assets/toro_resource_downloader/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "marumasa.toro_resource_downloader.client.TORO_Resource_DownloaderClient"
+    ],
+    "main": [
+      "marumasa.toro_resource_downloader.TORO_Resource_Downloader"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
