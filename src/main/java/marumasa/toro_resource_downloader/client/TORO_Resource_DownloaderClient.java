@@ -35,6 +35,8 @@ public class TORO_Resource_DownloaderClient implements ClientModInitializer {
             DownloadManager.save(url, ResourcePack_Path);
             // 更新後の URL を記録
             CONFIG.setResourceURL(url);
+            // ログ出力
+            LOGGER.info(String.format("GET %s", url));
         }
     }
 }
