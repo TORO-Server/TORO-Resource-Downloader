@@ -11,11 +11,7 @@ import java.util.List;
 public class DownloadManager {
 
     private static class GitHubJSON {
-        public List<Assets> assets;
-
-        public GitHubJSON(String assets) {
-            this.assets = new ArrayList<Assets>();
-        }
+        public List<Assets> assets = new ArrayList<>();
 
         private static class Assets {
             public String browser_download_url;
