@@ -5,3 +5,5 @@
 この Mod を導入すると、Minecraft 起動時に、
 
 最新の TORO サーバーのリソースパックを自動でダウンロードします。
+
+![image](https://github.com/TORO-Server/TORO-Resource-Downloader/assets/77374813/fcf92db7-81e5-4c37-8fa4-c7cc10db3a13)
