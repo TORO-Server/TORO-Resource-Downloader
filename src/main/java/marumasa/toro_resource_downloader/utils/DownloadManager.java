@@ -5,6 +5,9 @@ import com.google.gson.Gson;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,8 +64,25 @@ public class DownloadManager {
         }
     }
 
+    // ディレクトリ作成
+    private static void createDir(File FILE_PATH) {
+        Path dir = FILE_PATH.toPath().getParent();
+        // ディレクトリ存在チェック
+        if (!Files.exists(dir)) {
+            try {
+                Files.createDirectories(dir);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
     // URL から ダウンロード
-    public static void save(String FILE_URL, String FILE_PATH) {
+    public static void save(String FILE_URL, File FILE_PATH) {
+
+        // ディレクトリなければ作成
+        createDir(FILE_PATH);
+
         try (BufferedInputStream in = new BufferedInputStream(new URL(FILE_URL).openStream());
              FileOutputStream fileOutputStream = new FileOutputStream(FILE_PATH)) {
             byte[] dataBuffer = new byte[1024];
