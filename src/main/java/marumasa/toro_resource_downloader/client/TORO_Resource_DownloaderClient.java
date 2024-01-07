@@ -4,7 +4,6 @@ import marumasa.toro_resource_downloader.utils.DownloadManager;
 import net.fabricmc.api.ClientModInitializer;
 
 import java.io.File;
-import java.nio.file.Files;
 
 import static marumasa.toro_resource_downloader.TORO_Resource_Downloader.CONFIG;
 import static marumasa.toro_resource_downloader.TORO_Resource_Downloader.LOGGER;
